@@ -4,7 +4,7 @@ WORKDIR /saibaba
 
 COPY . /saibaba
 
-RUN  apt-get  install openssh -y
+RUN  apt-get  install openssh-server -y
 
 EXPOSE 22
 

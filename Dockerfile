@@ -8,4 +8,4 @@ RUN  apt-get update && apt-get  install openssh-server -y
 
 EXPOSE 22
 
-CMD ["/bin/bash", "-c", "/usr/sbin/sshd && tail -f /dev/null"]  
+CMD ["/usr/sbin/sshd", "-D"]

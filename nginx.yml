@@ -1,0 +1,18 @@
+---
+- name: Install Nginx inside Docker container
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+      connection: docker
+
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+      connection: docker
+

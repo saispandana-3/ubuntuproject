@@ -1,6 +1,7 @@
 ---
 - name: Install Nginx inside Docker container
   hosts: containers
+  gather_facts: no
   tasks:
     - name: Install Nginx
       apt:
